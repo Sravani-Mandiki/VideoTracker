@@ -7,6 +7,7 @@ const ProgressSchema = new mongoose.Schema({
   watchedIntervals: [[Number]],
   lastWatchedPosition: Number,
   totalUniqueWatchedSeconds: Number,
+  videoDuration: Number
 });
 
 module.exports = mongoose.model('Progress', ProgressSchema);
