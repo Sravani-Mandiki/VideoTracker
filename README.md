@@ -47,3 +47,45 @@ A full-stack video tracking application that monitors how much of a video a user
    
 React app runs at: http://localhost:3000
 
+
+
+# Design Decisions & Code Explanation
+
+# Tech Stack
+   Frontend: React.js for building responsive UI and managing state
+
+   Backend: Node.js + Express.js for creating RESTful APIs
+
+   Database: MongoDB to store video progress as flexible JSON-like documents
+
+# App Structure
+   client/: React app with video player and API calls to backend
+
+   server/: Express API that handles storing and retrieving progress
+
+   MongoDB used to persist watched intervals and last watched time
+
+# Key Logic
+   Watched Interval Tracking:
+
+   Intervals are stored as [start, end] arrays.
+
+   On each update, overlapping intervals are merged.
+
+   Duplicate segments aren’t double-counted.
+
+# Resume Logic:
+
+   When the video loads, the app fetches the last watched position from MongoDB and sets it in the player.
+
+   Frontend:
+
+      Uses useEffect to trigger saving progress when the video is paused or closed.
+
+      Axios is used to communicate with the backend.
+
+   Backend:
+
+      Receives video progress via POST /api/video-progress
+
+      Uses MongoDB update queries to merge and save data.
