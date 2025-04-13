@@ -43,7 +43,7 @@ A full-stack video tracking application that monitors how much of a video a user
    
 3. Start the React app:
 
-  npm start
+      npm start
    
 React app runs at: http://localhost:3000
 
@@ -78,14 +78,14 @@ React app runs at: http://localhost:3000
 
    When the video loads, the app fetches the last watched position from MongoDB and sets it in the player.
 
-   Frontend:
+# Frontend:
 
-      Uses useEffect to trigger saving progress when the video is paused or closed.
+   Uses useEffect to trigger saving progress when the video is paused or closed.
 
-      Axios is used to communicate with the backend.
+   Axios is used to communicate with the backend.
 
-   Backend:
+# Backend:
 
-      Receives video progress via POST /api/video-progress
+   Receives video progress via POST /api/video-progress
 
-      Uses MongoDB update queries to merge and save data.
+   Uses MongoDB update queries to merge and save data.
