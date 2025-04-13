@@ -13,8 +13,12 @@ const cors = require('cors');
 const app = express();
 const PORT = process.env.PORT || 5000;
 
+const allowedOrigins = ['https://video-tracker-w919.vercel.app'];
+
 app.use(cors({
-  origin: "https://video-tracker-beta.vercel.app"
+  origin: allowedOrigins,
+  methods: ['GET', 'POST'],
+  credentials: true
 }));
 
 app.use(express.json());
