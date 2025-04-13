@@ -16,20 +16,20 @@ A full-stack video tracking application that monitors how much of a video a user
 
 1. Navigate to the backend folder:
    
-  cd server
+     cd server
 
 3. Install backend dependencies:
 
-  npm install
+     npm install
 
 4. Create a .env file in the server/ folder and add:
 
-  MONGO_URI=your_mongodb_connection_string
-  PORT=3000
+     MONGO_URI=your_mongodb_connection_string
+     PORT=3000
 
 5. Start the backend server:
 
-  npm start
+     npm start
 
 # Frontend Setup (`client`)
 
